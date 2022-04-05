@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="form-section">
+      <h1 class="title">
+        Welcome
+      </h1>
+  
+      <form [formGroup]="registerForm" class="form">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" formControlName="lastName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="password" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="Phone Number"  formControlName="phoneNumber" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number Country Prefix</mat-label>
+        <input matInput placeholder="Phone Number Country Prefix"  formControlName="phoneNumberCountryPrefix" />
+      </mat-form-field>
+
+      </form>
+  
+      <button mat-raised-button (click)="redirectLogin()">
+        Back to Login
+      </button>
+      <button mat-raised-button (click)="createAccount()">
+        Create Account
+      </button>
+    </div>
+  
+    <div class="message-section">
+      <p>
+        
+      </p>
+    </div>
+  </div>
+  
