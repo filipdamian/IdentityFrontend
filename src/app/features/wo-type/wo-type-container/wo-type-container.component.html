@@ -1,0 +1,8 @@
+<p>wo-type-container works!</p>
+<button mat-raised-button style="position: relative; left: 50%;right: 50%; text-align: center;" (click)="addWOType()"
+    class="add-button">
+    Add WOType
+</button>
+<app-wo-types-list [woTypes]="woTypes$ | async" (navigateToWOTypeScenarioEvent)="navigateToWOTypeScenarioEvent($event)"
+    (deleteWOTypeEvent)="deleteWOTypeEventHandler($event)" (editWOTypeEvent)="editWOTypeEventHandler($event)">
+</app-wo-types-list>

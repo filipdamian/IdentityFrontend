@@ -1,0 +1,43 @@
+<p>wo-type-scenario-step-list works!</p>
+<div class="row" style="position: absolute; top:150px">
+    <div *ngFor="let woType of woTypeScenarioSteps" class="col-md-4">
+        <mat-card class="mat-elevation-z6" style="margin: 5px 5px; width: 100%; height: auto;">
+            <mat-card-title style="text-align: center;">Nume Pas: </mat-card-title>
+            <mat-card-title style="text-align: center;"> {{woType.stepName}}</mat-card-title>
+            <mat-card-subtitle>Cod Pas: {{woType.stepNumber}}</mat-card-subtitle>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            Codul Ecranului aferent acestui pas este {{woType.screenCode}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>
+                            Configureaza Ecran
+                        </span>
+                    </div>
+                    <div class="col-md-2">
+                        <button mat-mini-fab color="primary"
+                            aria-label="Example icon button with a arrow_right_alt icon"
+                            (click)="navigateToScreenEvent.emit(woType.screenId)">
+                            <mat-icon>arrow_right_alt</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions style="float: right; position: relative; top: -35px;">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a edit icon"
+                    (click)="editWOTypeScenarioStepEvent.emit(woType)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                    (click)="deleteWOTypeScenarioStepEvent.emit(woType.woScenarioId)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

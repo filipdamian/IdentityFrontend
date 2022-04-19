@@ -1,0 +1,60 @@
+<p>screen-list works!</p>
+<div class="container-fluid">
+    <div class="row" style="position: absolute; top:150px">
+        <div dataSource="[screen]" class="col-md-4">
+            <mat-card class="mat-elevation-z6" style="margin: 5px 5px; width: 100%; height: auto;">
+                <mat-card-title style="text-align: center;">Nume Ecran: </mat-card-title>
+                <mat-card-title style="text-align: center;"> {{screens.screenName}}</mat-card-title>
+                <mat-card-subtitle>Cod Ecran: {{screens.screenCode}}</mat-card-subtitle>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>
+                                Ecran inceput {{screens.start}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>
+                                Lucrarea sfarsit {{screens.end}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>
+                                Lucrarea sfarsit {{screens.description}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span>
+                                Configureaza tipuri de pasi ai scenariilor
+                            </span>
+                        </div>
+                        <!-- <div class="col-md-2">
+                            <button mat-mini-fab color="primary"
+                                aria-label="Example icon button with a arrow_right_alt icon"
+                                (click)="navigateToWOTypeScenarioSteps(woType.id)">
+                                <mat-icon>arrow_right_alt</mat-icon>
+                            </button>
+                        </div> -->
+                    </div>
+                </mat-card-content>
+                <mat-card-actions style="float: right; position: relative; top: -35px;">
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a edit icon"
+                        (click)="editScreenEvent.emit(screens)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                        (click)="deleteScreenEvent.emit(screens.id)">
+
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

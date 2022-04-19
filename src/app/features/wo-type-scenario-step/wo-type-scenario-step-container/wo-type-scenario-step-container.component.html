@@ -1,0 +1,11 @@
+<p>wo-type-scenario-step-container works!</p>
+<button mat-raised-button style="position: relative; left: 50%;right: 50%; text-align: center;"
+    (click)="addWOTypeScenarioStep()" class="add-button">
+    Add WOTypeScenarioStep
+</button>
+<app-wo-type-scenario-step-list [woTypeScenarioSteps]="woTypeScenarioSteps$ | async"
+    (navigateToScreenEvent)="navigateToScreenEvent($event)"
+    (deleteWOTypeScenarioStepEvent)="deleteWOTypeScenarioStepEventHandler($event)"
+    (editWOTypeScenarioStepEvent)="editWOTypeScenarioStepEventHandler($event)">
+
+</app-wo-type-scenario-step-list>

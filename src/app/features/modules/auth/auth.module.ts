@@ -25,7 +25,6 @@ import { PasswordRecoveryComponent } from './password-recovery/password-recovery
     AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-
   ]
 })
 export class AuthModule { }

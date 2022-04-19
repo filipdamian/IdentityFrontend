@@ -16,33 +16,40 @@ import { DialogForgotPasswordEmailComponent } from '../dialog-forgot-password/di
 })
 export class LoginComponent implements OnInit {
 
-	private url = environment.API_URL;
-
 	public loginForm: FormGroup = new FormGroup({
 		uniqueIdentifier: new FormControl(''),
 		password: new FormControl(''),
 	});
-	constructor(private router: Router,
-		private http: HttpClient, private _authService: AuthService, public dialog: MatDialog, private _toastrService: MessageToasterService) { }
+
+	constructor(
+		private router: Router,
+		private _authService: AuthService,
+		public dialog: MatDialog,
+		private _toastrService: MessageToasterService) {
+
+	}
 
 	//getters
 	get uniqueIdentifier(): AbstractControl {
 		return this.loginForm.get('email') as FormGroup;
 	}
+
 	get password(): AbstractControl {
 		return this.loginForm.get('password') as FormGroup;
 	}
 
 	ngOnInit(): void {
+		localStorage.removeItem("jwtToken");
+		localStorage.removeItem("jwtRefresh");
 	}
+
 	public login(): void {
 		console.log(this.loginForm.value);
 		this._authService.loginPostRequest(this.loginForm.value).subscribe(response => {
 			localStorage.setItem("jwtToken", response.token);
 			localStorage.setItem("jwtRefresh", response.refreshToken);
-			this.router.navigate(["/welcome"]);
+			this.router.navigate(["features/welcome"]);
 			this._toastrService.successMessage("Loged in successfully");
-			console.log(response.token)
 		});
 
 

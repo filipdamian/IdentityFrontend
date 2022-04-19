@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DialogForgotPasswordEmailComponent } from './dialog-forgot-password/dialog-forgot-password-email.component';
 import { EmailconfirmationComponent } from './emailconfirmation/emailconfirmation.component';
@@ -9,27 +9,27 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth/login',
+    pathMatch: 'full',
+    redirectTo: 'login'
   },
   {
-    path: 'auth/login',
+    path: 'login',
     component: LoginComponent
   },
-
   {
-    path: 'auth/register',
+    path: 'register',
     component: RegisterComponent,
   },
   {
-    path: 'auth/email-confirmation/:confirmationToken',
+    path: 'email-confirmation/:confirmationToken',
     component: EmailconfirmationComponent
   },
   {
-    path: 'auth/password-recovery',
+    path: 'password-recovery',
     component: DialogForgotPasswordEmailComponent
   },
   {
-    path: 'auth/forgot-password/:PasswordToken',
+    path: 'forgot-password/:PasswordToken',
     component: PasswordRecoveryComponent
   }
 ];

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { WoTypeContainerComponent } from './wo-type-container.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('WoTypeContainerComponent', () => {
+  let component: WoTypeContainerComponent;
+  let fixture: ComponentFixture<WoTypeContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ WoTypeContainerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(WoTypeContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

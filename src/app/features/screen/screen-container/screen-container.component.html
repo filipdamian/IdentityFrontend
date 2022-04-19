@@ -1,0 +1,9 @@
+<p>screen-container works!</p>
+<button mat-raised-button style="position: relative; left: 50%;right: 50%; text-align: center;" (click)="addScreen()"
+    class="add-button">
+    Add Screen
+</button>
+<app-screen-list [screens]="screens$ | async" (editScreenEvent)="editScreenEventHandler($event)"
+    (deleteScreenEvent)="deleteScreenEventHandler($event)">
+
+</app-screen-list>

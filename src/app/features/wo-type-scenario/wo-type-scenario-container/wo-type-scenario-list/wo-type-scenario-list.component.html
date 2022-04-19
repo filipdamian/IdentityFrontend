@@ -1,0 +1,57 @@
+<p>wo-type-scenario-list works!</p>
+<div class="row" style="position: absolute; top:150px">
+    <div *ngFor="let woType of woTypeScenarios" class="col-md-4">
+        <mat-card class="mat-elevation-z6" style="margin: 5px 5px; width: 100%; height: auto;">
+            <mat-card-title style="text-align: center;">Nume Scenariu: </mat-card-title>
+            <mat-card-title style="text-align: center;"> {{woType.scenarioName}}</mat-card-title>
+            <mat-card-subtitle>Cod Scenariu: {{woType.scenarioCode}}</mat-card-subtitle>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            Statusul lucrarii este {{woType.state}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            Lucrarea a inceput {{woType.start}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            Lucrarea se estimeaza ca va fi finalizata la {{woType.end}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>
+                            Configureaza tipuri de pasi ai scenariilor
+                        </span>
+                    </div>
+                    <div class="col-md-2">
+                        <button mat-mini-fab color="primary"
+                            aria-label="Example icon button with a arrow_right_alt icon"
+                            (click)="navigateToWOTypeScenarioStepEvent.emit(woType.id)">
+                            <mat-icon>arrow_right_alt</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions style="float: right; position: relative; top: -35px;">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a edit icon"
+                    (click)="editWOTypeScenarioEvent.emit(woType)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                    (click)="deleteWOTypeScenarioEvent.emit(woType.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

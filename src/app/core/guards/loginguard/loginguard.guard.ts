@@ -4,23 +4,23 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class LoginguardGuard implements CanActivate, CanLoad {
-  constructor(private router: Router, private jwtHelper: JwtHelperService) { }
-  canActivate(
-  ): boolean {
-    const token = localStorage.getItem("jwtToken");
-    if ((token != null && this.jwtHelper.isTokenExpired(token) === true) || token == null) {
+    constructor(private router: Router, private jwtHelper: JwtHelperService) { }
+    canActivate(
+    ): boolean {
+        const token = localStorage.getItem("jwtToken");
+        if ((token != null && this.jwtHelper.isTokenExpired(token) === true) || token == null) {
 
-      return true;
+            return true;
+        }
+        this.router.navigate(["features/welcome"]);
+        return false;
     }
-    this.router.navigate(["/welcome"]);
-    return false;
-  }
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  }
+    canLoad(
+        route: Route,
+        segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+        return true;
+    }
 }

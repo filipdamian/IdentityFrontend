@@ -15,6 +15,7 @@ export class AuthguardGuard implements CanActivate, CanLoad {
         const token = localStorage.getItem("jwtToken");
         const refreshToken = localStorage.getItem("jwtRefresh");
         if (!token || !refreshToken) {
+            this.router.navigate(["unauthenticated/auth"]);
             return of(false);
         }
         if (this.jwtHelper.isTokenExpired(token) === false) {
@@ -22,6 +23,7 @@ export class AuthguardGuard implements CanActivate, CanLoad {
             return of(true);
         }
 
+        this.router.navigate(["unauthenticated/auth"]);
         return of(false);
     }
 
