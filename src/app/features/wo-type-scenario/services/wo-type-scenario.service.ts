@@ -2,9 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { WOTypeScenarioWrapper } from 'src/app/core/interfaces/WOTypeScenarioWrapper';
 import { environment } from 'src/environments/environment';
+import { WoTypeScenarioServiceModuleModule } from './wo-type-scenario-service-module.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: WoTypeScenarioServiceModuleModule
 })
 export class WoTypeScenarioService {
   private readonly url_wotype = environment.WOTYPE_URL;

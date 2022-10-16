@@ -17,11 +17,15 @@ const routes: Routes = [
         component: AuthenticatedLayoutComponent,
         children: [
             {
+                path: 'woType',
+                loadChildren: () => import('src/app/features/wo-type/wo-type.module').then(m => m.WoTypeModule)
+            },
+            {
                 path: 'welcome',
                 loadChildren: () => import('src/app/features/welcome/welcome.module').then(m => m.WelcomeModule)
             },
             {
-                path: 'woTypeScenarios',
+                path: 'woTypeScenarios/:id',
                 loadChildren: () => import('src/app/features/wo-type-scenario/wo-type-scenario.module').then(m => m.WoTypeScenarioModule)
             },
             {

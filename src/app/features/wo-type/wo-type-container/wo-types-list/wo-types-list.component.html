@@ -23,7 +23,7 @@
                         <div class="col-md-2">
                             <button mat-mini-fab color="primary"
                                 aria-label="Example icon button with a arrow_right_alt icon"
-                                (click)="navigateToWOTypeScenarioEvent.emit(woType.id)">
+                                [routerLink]="['/features/woTypeScenarios',woType.id]">
                                 <mat-icon>arrow_right_alt</mat-icon>
                             </button>
                         </div>

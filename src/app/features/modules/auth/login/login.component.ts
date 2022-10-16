@@ -1,11 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, AbstractControl } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { MessageToasterService } from 'src/app/core/services/message-toaster.service';
-import { environment } from 'src/environments/environment';
 import { DialogForgotPasswordEmailComponent } from '../dialog-forgot-password/dialog-forgot-password-email.component';
 
 

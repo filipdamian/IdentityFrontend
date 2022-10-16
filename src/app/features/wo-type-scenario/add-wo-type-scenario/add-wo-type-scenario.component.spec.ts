@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddorEditWOTypeComponent } from './addor-edit-wotype.component';
+import { AddWoTypeScenarioComponent } from './add-wo-type-scenario.component';
 
-describe('AddorEditWOTypeComponent', () => {
-  let component: AddorEditWOTypeComponent;
-  let fixture: ComponentFixture<AddorEditWOTypeComponent>;
+describe('AddWoTypeScenarioComponent', () => {
+  let component: AddWoTypeScenarioComponent;
+  let fixture: ComponentFixture<AddWoTypeScenarioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddorEditWOTypeComponent ]
+      declarations: [ AddWoTypeScenarioComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddorEditWOTypeComponent);
+    fixture = TestBed.createComponent(AddWoTypeScenarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

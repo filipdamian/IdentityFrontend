@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="title">
+        Edit WoType
+    </h1>
+
+    <form [formGroup]="WOTypeForm" class="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>WOTypeCode</mat-label>
+            <input matInput placeholder="WOTypeCode" [formControl]="WOTypeCode" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>WOTypeName</mat-label>
+            <input matInput placeholder="WOTypeName" [formControl]="WOTypeName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>DurationMinutes</mat-label>
+            <input matInput placeholder="DurationMinutes" [formControl]="DurationMinutes" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="editWotype()" appHoverBtn>
+        Save
+    </button>
+</div>

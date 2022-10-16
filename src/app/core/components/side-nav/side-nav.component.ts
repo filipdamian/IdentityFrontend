@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { WoTypeContainerComponent } from 'src/app/features/wo-type/wo-type-container/wo-type-container.component';
 
 @Component({
     selector: 'app-side-nav',
@@ -12,6 +13,8 @@ export class SideNavComponent implements OnInit {
 
     public isHandset$: Observable<boolean>;
 
+
+
     constructor(private readonly _breakpointObserver: BreakpointObserver) { }
 
     ngOnInit(): void {
@@ -20,6 +23,7 @@ export class SideNavComponent implements OnInit {
                 map(result => result.matches),
                 shareReplay()
             );
+
     }
 
 }

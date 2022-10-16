@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import { WOType } from 'src/app/core/interfaces/WOTypeCommand';
 import { WOTypeWrapper } from 'src/app/core/interfaces/WOTypeWrapper';
 import { environment } from 'src/environments/environment';
-import { WoTypeModule } from '../wo-type.module';
+import { WoTypeServicesModule } from './wo-type-services.module';
 
 
 @Injectable({
-    providedIn: WoTypeModule
+    providedIn: WoTypeServicesModule
 })
 export class WOTypeService {
     private readonly url_wotype = environment.WOTYPE_URL;

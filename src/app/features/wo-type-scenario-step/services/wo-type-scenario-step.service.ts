@@ -2,9 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { WOTypeScenarioStepWrapper } from 'src/app/core/interfaces/WOTypeScenarioStepWrapper';
 import { environment } from 'src/environments/environment';
+import { WoTypeScenarioStepServiceModuleModule } from './wo-type-scenario-step-service-module.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: WoTypeScenarioStepServiceModuleModule
 })
 export class WoTypeScenarioStepService {
 

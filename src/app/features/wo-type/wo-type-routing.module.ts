@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddWoTypeComponent } from './add-wo-type/add-wo-type.component';
+import { EditWoTypeComponent } from './edit-wo-type/edit-wo-type.component';
 import { WoTypeContainerComponent } from './wo-type-container/wo-type-container.component';
 
 const routes: Routes = [
@@ -8,27 +10,13 @@ const routes: Routes = [
         component: WoTypeContainerComponent
     },
     {
-        path: ':id',
-        //component: WoTypeContainerComponent
+        path: 'add',
+        component: AddWoTypeComponent
     },
     {
-        path: 'add',
-        //component: WoTypeContainerComponent
+        path: 'edit/:id',
+        component: EditWoTypeComponent,
     }
-    // {
-    //     path: 'wotypescenario/:id',
-    //     component: WotypescenarioComponent,
-
-    // },
-    // {
-    //     path: 'wotypescenariostep/:id',
-    //     component: WotypescenariostepComponent
-    // },
-    // {
-    //     path: 'screen/:id',
-    //     component: ScreenComponent
-
-    // }
 ];
 
 @NgModule({

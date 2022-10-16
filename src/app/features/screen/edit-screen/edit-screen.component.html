@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="title">
+        Edit Screen
+    </h1>
+
+    <form [formGroup]="screenForm" class="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>screenCode</mat-label>
+            <input matInput placeholder="screenCode" formControlName="screenCode" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>screenName</mat-label>
+            <input matInput placeholder="screenName" formControlName="screenName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>start</mat-label>
+            <input matInput placeholder="start" formControlName="start" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>end</mat-label>
+            <input matInput placeholder="end" formControlName="end" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>description</mat-label>
+            <input matInput placeholder="description" formControlName="description" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="editScreen()" appHoverBtn>
+        Save
+    </button>
+</div>

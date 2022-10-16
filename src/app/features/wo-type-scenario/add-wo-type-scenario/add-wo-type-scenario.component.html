@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="title">
+        Add WoTypeScenario
+    </h1>
+
+    <form [formGroup]="WOTypeScenarioForm" class="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>scenarioCode</mat-label>
+            <input matInput placeholder="scenarioCode" [formControl]="scenarioCode" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>scenarioName</mat-label>
+            <input matInput placeholder="scenarioName" [formControl]="scenarioName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>state</mat-label>
+            <input matInput placeholder="state" [formControl]="state" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>start</mat-label>
+            <input matInput placeholder="start" [formControl]="start" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>end</mat-label>
+            <input matInput placeholder="end" [formControl]="end" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="addWotypeScenario()" appHoverBtn>
+        Save
+    </button>
+</div>

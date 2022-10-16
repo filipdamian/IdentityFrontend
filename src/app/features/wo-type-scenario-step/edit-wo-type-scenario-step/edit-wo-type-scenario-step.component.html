@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="title">
+        Edit WoTypeScenarioStep
+    </h1>
+
+    <form [formGroup]="WOTypeScenarioStepForm" class="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>stepNumber</mat-label>
+            <input matInput placeholder="stepNumber" formControlName="stepNumber" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>stepName</mat-label>
+            <input matInput placeholder="stepName" formControlName="stepName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>screenCode</mat-label>
+            <input matInput placeholder="screenCode" formControlName="screenCode" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>woScenarioId</mat-label>
+            <input matInput placeholder="woScenarioId" formControlName="woScenarioId" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>screenId</mat-label>
+            <input matInput placeholder="screenId" formControlName="screenId" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="editWotypeScenarioStep()" appHoverBtn>
+        Save
+    </button>
+</div>
