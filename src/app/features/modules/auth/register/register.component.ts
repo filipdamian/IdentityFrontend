@@ -47,14 +47,14 @@ export class RegisterComponent implements OnInit {
 	ngOnInit(): void {
 	}
 	public redirectLogin(): void {
-		this.router.navigate(['/auth/login']);
+		this.router.navigate(['/unauthenticated/auth/login']);
 	}
 	public createAccount(): void {
 		console.log(this.registerForm.value);
 		this._authService.registerPostRequset(this.registerForm.value)
 			.subscribe((response: boolean) => {
 				if (response === true) {
-					this.router.navigate(["/auth/login"])
+					this.router.navigate(["/unauthenticated/auth/login"])
 					this._toastrService.successMessage("User registered");
 					this._toastrService.successMessage("Email Confirmation Sent");
 					this._toastrService.warningMessage("Please confirm Email");

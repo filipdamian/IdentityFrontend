@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
 
 	}
 	public register(): void {
-		this.router.navigate(['/auth/register']);
+		this.router.navigate(['/unauthenticated/auth/register']);
 
 	}
 	public forgotpassword(): void {
